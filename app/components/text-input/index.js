@@ -1,8 +1,7 @@
 import React from 'react'
-import {TextInputType} from '../../lib/definitions'
 import styles from './index.module.css'
 
-export default function TextInput({ type, name, placeholder, handleBlurEvent }: TextInputType) {
+export default function TextInput({ type, name, placeholder, handleBlurEvent }) {
   return (
     <>
       <input

@@ -5,33 +5,28 @@ import Button from '../../components/button'
 import Logo from '../../components/logo'
 import styles from './index.module.css'
 import { useState } from 'react'
-import { UserDetailType } from '../../lib/definitions'
 import { CirclesWithBar } from 'react-loader-spinner'
 
-export default function EditUserModal({ isLoading, user_detail, handleUpdate }: {
-  user_detail: UserDetailType,
-  handleUpdate: any,
-  isLoading: boolean
-}) {
+export default function EditUserModal({ isLoading, user_detail, handleUpdate }) {
   let [state, setState] = useState({
     first_name: null,
     last_name: null,
     user_name: null,
   });
 
-  const getFirstName = (e: any) => {
+  const getFirstName = (e) => {
     setState({...state, first_name: e.target.value})
   }
 
-  const getLastName = (e: any) => {
+  const getLastName = (e) => {
     setState({...state, last_name: e.target.value})
   }
 
-  const getUserName = (e: FocusEvent) => {
+  const getUserName = (e) => {
     setState({...state, user_name: e.target.value})
   }
 
-  const validateInput = (body:any) => {
+  const validateInput = (body) => {
     let { first_name, last_name, user_name } = body
 
     if(first_name && last_name && user_name) {
