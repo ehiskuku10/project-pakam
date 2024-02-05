@@ -59,7 +59,11 @@ export const deleteUser = async (id) => {
 
 export const login = async (body) => {
   return axios
-    .post(`${SERVER_URI}/user/login`, body)
+    .post(`${SERVER_URI}/user/login`, body, {
+      headers: {
+        'Authorization': localStorage.token ? `${localStorage.token}` : null,
+      }
+    })
     .then(response => {
       return response.data
     })
