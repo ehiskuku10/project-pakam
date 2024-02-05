@@ -1,1 +1,1 @@
-export const SERVER_URI = 'http://localhost:3002'
+export const SERVER_URI = 'https://pakam-caa42362631b.herokuapp.com/'
