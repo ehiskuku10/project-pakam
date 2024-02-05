@@ -17,7 +17,8 @@ export const getUsers = async () => {
     .get(`${SERVER_URI}/user`, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.token ? `${localStorage.token}` : null
+        'Authorization': localStorage.token ? `${localStorage.token}` : null,
+        'Access-Control-Allow-Origin': SERVER_URI
       }
     })
     .then(response => {
