@@ -1,0 +1,13 @@
+.forgotStyles {
+  margin: .5rem 0 1rem;
+  font-size: 13px;
+}
+
+.forgotStyles > span:nth-child(1) {
+  color: #9b9a9a;
+  margin-right: .5rem;
+}
+
+.forgotStyles > span:nth-child(2) {
+  color: #2a832a;
+}

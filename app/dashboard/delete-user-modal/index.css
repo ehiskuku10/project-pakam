@@ -1,0 +1,48 @@
+.DeleteModal {
+  width: 400px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.DeleteModal__Text {
+  margin-bottom: 20px;
+}
+
+.DeleteModal__Text--primary {
+  color: #444;
+  font-size: 16px;
+  font-weight: 600;
+  color: #005700;
+}
+
+.DeleteModal__Text--secondary {
+  color: rgb(122, 122, 122);
+  font-size: 14px;
+}
+
+.DeleteModal__Button, .DeleteModal__Loader {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.DeleteModal__Button {
+  margin-top: 30px;
+}
+
+.DeleteModal__Button > button{
+  padding: 8px 10px;
+  width: 30%;
+  font-weight: 600;
+}
+
+.DeleteModal__Button > button:nth-child(1) {
+  background-color: #fff;
+  color: #005700;
+  margin-right: 10px;
+  border: 2px solid #005700 !important;
+}
+
+.DeleteModal__Button > button:nth-child(2) {
+  background-color: red;
+}

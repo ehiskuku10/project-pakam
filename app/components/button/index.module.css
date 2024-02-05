@@ -1,0 +1,10 @@
+.buttonStyles {
+  padding: .8rem;
+  background-color: #80ab80;
+  color: #fff;
+  outline: none;
+  border: 0;
+  border-radius: .5rem;
+  width: 100%;
+  text-transform: capitalize;
+}

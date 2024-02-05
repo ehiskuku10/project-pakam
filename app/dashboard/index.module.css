@@ -1,0 +1,26 @@
+.dashboard{
+  position: relative;
+}
+
+.dashboardHeaderText {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.dashboardPanel {
+  position: relative;
+  padding-top: 2rem;
+  left: 17rem;
+  width: calc(100% - 19rem);
+}
+
+.dashboardLoader {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboardHeaderButton {
+  text-align: right;
+  margin-bottom: 20px;
+}

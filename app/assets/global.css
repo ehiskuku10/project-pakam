@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+input {
+  border-radius: .5rem;
+  border: 1px solid #ddd;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .4rem;
+  color: #4e4e4e;
+  font-size: 14px;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+a:hover,
+button:hover {
+  opacity: .8;
+}
+
+.Form__Container {
+  background-color: #fff;
+  width: 55%;
+  margin: 5% auto 0;
+  padding: 4rem 1rem;
+  border-radius: 5px;
+}
+
+.Form__Header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.Form__Header-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.Form__Control {
+  display: flex;
+  justify-content: center;
+}
+
+.Form__Field {
+  padding: .5rem;
+  width: 50%;
+}
+
+.Form__Footer {
+  display: flex;
+  justify-content: center;
+}
