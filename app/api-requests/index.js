@@ -3,7 +3,12 @@ import { SERVER_URI } from '../env'
 
 export const createUser = async (body) => {
   return axios
-    .post(`${SERVER_URI}/user`, body)
+    .post(`${SERVER_URI}/user`, body, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': SERVER_URI
+      }
+    })
     .then(response => {
       return response.data
     })
@@ -34,7 +39,8 @@ export const updateUser = async (body, id) => {
     .put(`${SERVER_URI}/user/${id}`, body, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.token ? `${localStorage.token}` : null
+        'Authorization': localStorage.token ? `${localStorage.token}` : null,
+        'Access-Control-Allow-Origin': SERVER_URI
       }
     })
     .then(response => {
@@ -50,7 +56,8 @@ export const deleteUser = async (id) => {
     .delete(`${SERVER_URI}/user/${id}`, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.token ? `${localStorage.token}` : null
+        'Authorization': localStorage.token ? `${localStorage.token}` : null,
+        'Access-Control-Allow-Origin': SERVER_URI
       }
     })
     .then(response => {
@@ -63,7 +70,12 @@ export const deleteUser = async (id) => {
 
 export const login = async (body) => {
   return axios
-    .post(`${SERVER_URI}/user/login`, body)
+    .post(`${SERVER_URI}/user/login`, body, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': SERVER_URI
+      }
+    })
     .then(response => {
       return response.data
     })
