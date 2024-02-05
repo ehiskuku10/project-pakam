@@ -6,7 +6,7 @@ export const createUser = async (body) => {
     .post(`${SERVER_URI}/user`, body, {
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': SERVER_URI
+        'Access-Control-Allow-Origin': `${SERVER_URI}/user`
       }
     })
     .then(response => {
