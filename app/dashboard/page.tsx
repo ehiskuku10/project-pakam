@@ -93,6 +93,12 @@ export default function Dashboard() {
     }else {
       setState({...state, isLoading_edit: false})
       toast.error(response.message)
+
+      if(response.data && !response.data.isLoggedIn) {
+        setTimeout(() => {
+          router.push('/login')
+        }, 2000)
+      }
     }
   }
 
@@ -111,8 +117,13 @@ export default function Dashboard() {
       toast.success(response.message)
     }else {
       setState({...state, isLoading_delete: false})
-
       toast.error(response.message)
+
+      if(response.data && !response.data.isLoggedIn) {
+        setTimeout(() => {
+          router.push('/login')
+        }, 2000)
+      }
     }
   }
 

@@ -54,6 +54,12 @@ export default function Login() {
         }, 2000)
       }else {
         toast.error(response.message)
+
+        if(response.data && response.data.isLoggedIn) {
+          setTimeout(() => {
+            router.push('/dashboard', { scroll: false })
+          }, 2000)
+        }
       }
     }else {
       setState({...state, isLoading: false})
