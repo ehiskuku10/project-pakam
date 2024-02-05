@@ -6,7 +6,6 @@ export const createUser = async (body) => {
     .post(`${SERVER_URI}/user`, body, {
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': `${SERVER_URI}/user`
       }
     })
     .then(response => {
@@ -23,7 +22,6 @@ export const getUsers = async () => {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': localStorage.token ? `${localStorage.token}` : null,
-        'Access-Control-Allow-Origin': SERVER_URI
       }
     })
     .then(response => {
@@ -40,7 +38,6 @@ export const updateUser = async (body, id) => {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': localStorage.token ? `${localStorage.token}` : null,
-        'Access-Control-Allow-Origin': SERVER_URI
       }
     })
     .then(response => {
@@ -57,7 +54,6 @@ export const deleteUser = async (id) => {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': localStorage.token ? `${localStorage.token}` : null,
-        'Access-Control-Allow-Origin': SERVER_URI
       }
     })
     .then(response => {
@@ -73,7 +69,6 @@ export const login = async (body) => {
     .post(`${SERVER_URI}/user/login`, body, {
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': SERVER_URI
       }
     })
     .then(response => {
