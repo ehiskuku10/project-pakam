@@ -145,7 +145,7 @@ export default function CreateUser() {
         }
       </div>
       <div className='Form__Footer'>
-        <Forgot title='Or Login' />
+        <Forgot title='Or Login' to='/create-user' />
       </div>
     </div>
   );
