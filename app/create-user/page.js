@@ -145,7 +145,7 @@ export default function CreateUser() {
         }
       </div>
       <div className='Form__Footer'>
-        <Forgot />
+        <Forgot text='Or Login' />
       </div>
     </div>
   );
