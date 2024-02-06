@@ -65,6 +65,13 @@ export default function CreateUser() {
         }, 2000)
       }else {
         toast.error(response.message)
+        setState({...state, isLoading: false})
+
+        if(response.data && response.data.isLoggedIn) {
+          setTimeout(() => {
+            router.push('/dashboard', { scroll: false })
+          }, 2000)
+        }
       }
     }else {
       setState({...state, isLoading: false})

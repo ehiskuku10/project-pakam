@@ -54,6 +54,7 @@ export default function Login() {
         }, 2000)
       }else {
         toast.error(response.message)
+        setState({...state, isLoading: false})
 
         if(response.data && response.data.isLoggedIn) {
           setTimeout(() => {
